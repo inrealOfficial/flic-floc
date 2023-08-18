@@ -1,0 +1,195 @@
+:root {
+  --color-primary: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+  @media (max-width: 800px) {
+    font-size: 80%;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 80%;
+  }
+}
+
+.header-mobile-navbar {
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: -2000px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.911);
+  transition: 0.3s all ease-in-out;
+  svg {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+  }
+  .header-mobile-nav-inside-top {
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      li {
+        list-style: none;
+        color: white;
+        font-family: Poppins;
+        padding: 1rem 0;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 12vh;
+  background-color: rgba(0, 0, 0, 0.699);
+  .header-inside {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header-left {
+      width: 50%;
+      height: 100%;
+      .logo-container {
+        width: 18%;
+        height: 100%;
+        @media (max-width: 900px) {
+          width: 25%;
+        }
+        @media (max-width: 600px) {
+          width: 50%;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 90%;
+        }
+      }
+    }
+
+    .header-mobile-only {
+      display: none;
+      @media (max-width: 900px) {
+        display: block;
+      }
+    }
+    .header-right {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      @media (max-width: 900px) {
+        display: none;
+      }
+      justify-content: space-evenly;
+      .header-right-one {
+        width: 100%;
+        ul {
+          display: flex;
+          li {
+            list-style: none;
+            color: white;
+            font-family: Lato;
+            font-size: 0.9rem;
+            margin-right: 1.5rem;
+            &.active {
+              color: #faf46e;
+            }
+          }
+        }
+      }
+      .header-right-two {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 2rem;
+
+        svg {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.App {
+  width: 100vw;
+  height: 100%;
+}
+
+.main-hero {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #0000009a, #00000075),
+    url("https://cdn.discordapp.com/attachments/1088081788758392913/1141766235575566479/aditya-chinchure-ZhQCZjr9fHo-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .main-hero-inside {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      color: white;
+      font-family: "Lato", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: white;
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      margin: 1rem 0;
+    }
+    button {
+      font-weight: 600;
+      padding: 1rem 2rem;
+      background-color: #faf46e;
+      font-family: "Lato", sans-serif;
+      border: 0px;
+      transition: 0.2s all ease-in-out;
+
+      &:hover {
+        border: 1px solid #faf46e;
+        color: #faf46e;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.288);
+      }
+    }
+  }
+}
