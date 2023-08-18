@@ -1,0 +1,93 @@
+.contact-page {
+  width: 100vw;
+  min-height: 100vh;
+  max-height: fit-content;
+  background-image: linear-gradient(to bottom, #0000009a, #00000075),
+    url("https://cdn.discordapp.com/attachments/1088081788758392913/1141766235575566479/aditya-chinchure-ZhQCZjr9fHo-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .contact-page-inside {
+    width: 80%;
+    min-height: 100vh;
+    max-height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20vh;
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+    h1 {
+      color: white;
+      font-family: Poppins;
+    }
+
+    .contact-us-form {
+      width: 90%;
+      height: fit-content;
+      padding: 2rem;
+      margin: 5rem auto;
+      background-color: rgba(0, 0, 0, 0.644);
+      border-radius: 1rem;
+      h1 {
+        text-align: center;
+        color: #faf46e;
+        font-size: 2.5rem;
+        padding: 2rem 0;
+      }
+      form {
+        width: 40%;
+        margin: 0 auto;
+        height: fit-content;
+        margin-top: 1rem;
+        @media (max-width: 900px) {
+          width: 80%;
+        }
+        .input-form {
+          margin: 1rem 0;
+          label {
+          }
+
+          input,
+          textarea {
+            border: 0px;
+            border-bottom: 1px solid #faf46e;
+            width: 100%;
+            border-radius: 0.25rem;
+            color: white;
+            padding: 1rem;
+            background-color: transparent;
+            font-family: Poppins;
+            transition: 0.2s all ease-in-out;
+            &:focus {
+              border-bottom: 1px solid #ffffff;
+              outline: 0px;
+            }
+          }
+        }
+
+        button {
+          margin: 2rem 0;
+          width: 100%;
+          font-weight: 600;
+          padding: 1rem 2rem;
+          background-color: #faf46e;
+          font-family: "Lato", sans-serif;
+          border: 0px;
+          transition: 0.2s all ease-in-out;
+
+          &:hover {
+            border: 1px solid #faf46e;
+            color: #faf46e;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.288);
+          }
+        }
+      }
+    }
+  }
+}
